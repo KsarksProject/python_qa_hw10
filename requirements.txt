@@ -1,6 +1,6 @@
-selene>=2.0.0rc7
-pytest~=8.3.3
-selenium>=4.27.1
+pytest~=8.3.4
+selene~=2.0.0rc9
 allure-pytest
+selenium
+
 allure-python-commons~=2.13.5
-webdriver-manager
