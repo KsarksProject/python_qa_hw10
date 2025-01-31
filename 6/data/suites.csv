@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","0","test_steps","tests","Fri Jan 31 09:42:42 GMT 2025","broken","Fri Jan 31 09:42:42 GMT 2025","","test_simplesteps","",""
+"","0","test_clean_issue","tests","Fri Jan 31 09:42:42 GMT 2025","broken","Fri Jan 31 09:42:42 GMT 2025","","test_selene","",""
+"Тест проверяет наличие репозитория и Issues","0","test_github_issue","tests","Fri Jan 31 09:42:34 GMT 2025","broken","Fri Jan 31 09:42:34 GMT 2025","","test_labelsteps","",""
