@@ -12,17 +12,14 @@ jobs:
   test:
     name: Run Tests
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          persist-credentials: false  # Исправляет ошибку с git fetch
 
-      - name: Set up Python 3.11
+      - name: Set up Python 3.x
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: '3.13'
 
       - name: Install dependencies
         run: |
@@ -32,27 +29,4 @@ jobs:
       - name: Run Pytest with Allure
         run: |
           mkdir -p allure-results
-          pytest tests --alluredir=allure-results -v 
-
-      - name: Get Allure history
-        uses: actions/checkout@v4
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Generate Allure Report
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        with:
-          allure_results: allure-results
-          allure_history: gh-pages
-          keep_reports: 20
-
-      - name: Deploy report to GitHub Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: gh-pages
+          HEADLESS=true pytest tests --alluredir=allure-results -v
