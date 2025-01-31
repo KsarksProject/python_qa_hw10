@@ -32,7 +32,7 @@ jobs:
       - name: Run Pytest with Allure
         run: |
           mkdir -p allure-results
-          pytest tests --alluredir=allure-results -v --driver Chrome --capability userDataDir /tmp/chrome-user-data
+          pytest tests --alluredir=allure-results -v 
 
       - name: Get Allure history
         uses: actions/checkout@v4
