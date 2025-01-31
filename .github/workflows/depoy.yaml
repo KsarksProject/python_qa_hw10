@@ -3,7 +3,7 @@ name: Run Pytest with Allure
 on:
   push:
     branches:
-      - "main"
+      - "master"
 
 jobs:
   test:
